@@ -15,8 +15,22 @@ const TourCard = ({ city, cardClicked }) => {
    )
 };
 
-TourCard.propTypes = {};
+TourCard.propTypes = {
+   city: {
+      imgUrl: PropTypes.string,
+      city: PropTypes.string,
+      country: PropTypes.string,
+   },
+   cardClicked: PropTypes.func,
+};
 
-TourCard.defaultProps = {};
+TourCard.defaultProps = {
+   city: {
+      imgUrl: "/images/lahore_pic.jpg",
+      city: "Lahore",
+      country: "Pakistan",
+   },
+   cardClicked: (card) => console.log("Card Clicked:", card),
+};
 
 export default TourCard;
