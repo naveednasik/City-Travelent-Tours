@@ -154,8 +154,12 @@ const TravelentTours = ({ cardClicked }) => (
    </TravelentToursWrapper>
 );
 
-TravelentTours.propTypes = {};
+TravelentTours.propTypes = {
+   cardClicked: PropTypes.func
+};
 
-TravelentTours.defaultProps = {};
+TravelentTours.defaultProps = {
+   cardClicked: (card) => console.log("Card Clicked:", card),
+};
 
 export default TravelentTours;
