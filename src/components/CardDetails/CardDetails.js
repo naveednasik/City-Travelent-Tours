@@ -37,8 +37,37 @@ const CardDetails = ({ card, cardClicked }) => {
       </CardDetailsWrapper>
    );
 };
-CardDetails.propTypes = {};
 
-CardDetails.defaultProps = {};
+CardDetails.propTypes = {
+   card: PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+      imgUrl: PropTypes.string,
+      famousDestinations: PropTypes.arrayOf(
+         PropTypes.shape({
+            title: PropTypes.string,
+            images: PropTypes.arrayOf(PropTypes.string),
+            description: PropTypes.string,
+         })
+      ),
+   }),
+   cardClicked: PropTypes.func,
+};
+
+CardDetails.defaultProps = {
+   card: {
+      title: "Default Title",
+      description: "Default description",
+      imgUrl: "/images/lahore_pic.jpg",
+      famousDestinations: [
+         {
+            title: "Default Destination Title",
+            images: ["/images/lahore_pic.jpg", "/images/lahore_pic1.jpg"],
+            description: "Default destination description",
+         },
+      ],
+   },
+   cardClicked: (card) => console.log("Card Clicked:", card),
+};
 
 export default CardDetails;
