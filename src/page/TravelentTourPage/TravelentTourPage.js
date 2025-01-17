@@ -1,5 +1,4 @@
 import { React, useState } from 'react';
-import PropTypes from 'prop-types';
 import { TravelentTourPageWrapper, TravelentTourBody } from './TravelentTourPage.styled';
 import Navbar from '../../components/Navbar/Navbar';
 import TravelentTours from '../../components/TravelentTours/TravelentTours';
@@ -25,9 +24,5 @@ const TravelentTourPage = () => {
    )
 
 };
-
-TravelentTourPage.propTypes = {};
-
-TravelentTourPage.defaultProps = {};
 
 export default TravelentTourPage;
