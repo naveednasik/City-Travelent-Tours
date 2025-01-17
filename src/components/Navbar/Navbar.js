@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { NavbarWrapper, TravelentLogo, LogoText, NavOptions, NavOption, Logo, LinkStyles } from './Navbar.styled';
 import { Link } from "react-router-dom";
 
@@ -50,9 +49,5 @@ const Navbar = () => (
       </NavOptions>
    </NavbarWrapper >
 );
-
-Navbar.propTypes = {};
-
-Navbar.defaultProps = {};
 
 export default Navbar;
